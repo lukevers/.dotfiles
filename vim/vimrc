@@ -1,0 +1,49 @@
+set nocompatible " Disable vi-compatibility
+set t_Co=256
+
+set guioptions-=T " Removes top toolbar
+set guioptions-=r " Removes right hand scroll bar
+set go-=L " Removes left hand scroll bar
+
+syntax on 				" syntax 
+syntax enable
+colorscheme xoria256
+
+set number				" always show line numbers
+set tabstop=4		 	" a tab is 4 spaces
+set showmode			" always show what mode we're currently editing in
+set autoindent			" always set autoindenting on
+set ignorecase			" ignore case when searching
+set smartcase			" ignore case if search pattern is all lowercase
+set mouse=a				" scroll with trackpad
+set nowrap				" don't wrap lines
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+"easier window navigation 
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+  
+"Resize vsplit
+nmap <C-v> :vertical resize +5<cr>
+nmap 25 :vertical resize 40<cr>
+nmap 50 <c-w>=
+map 75 :vertical resize 120<cr>
+
+"Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
+" NERD Tree
+nmap <C-b> :NERDTreeToggle<cr>
+
+" Running vim-pathogen to load ~/.vim/bundle
+execute pathogen#infect()
+
