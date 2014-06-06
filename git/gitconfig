@@ -1,0 +1,13 @@
+[user]
+	name = Luke Evers
+	email = me@lukevers.com
+[core]
+	editor = vi
+[color]
+	ui = auto
+[log]
+	decorate = short
+[apply]
+	whitespace = strip
+[push]
+	default = matching
