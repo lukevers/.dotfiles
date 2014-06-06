@@ -1,12 +1,38 @@
 #!/bin/bash
 
 HOME=/Users/lukevers
-REPO=$HOME/.dotfiles
+DOTFILES=$HOME/.dotfiles
+
+##############
+# Link Files #
+##############
 
 # Git
-ln -fs $REPO/git/gitconfig $HOME/.gitconfig
+if [[ ! -L "$HOME/.gitconfig" ]] 
+then
+	ln -s $DOTFILES/git/gitconfig $HOME/.gitconfig
+fi
 
 # Vim
-ln -fs $REPO/vim/vimrc $HOME/.vimrc
-ln -fs $REPO/vim/vim/ $HOME/.vim
+if [[ ! -L "$HOME/.vimrc" ]]
+then
+	ln -s $DOTFILES/vim/vimrc $HOME/.vimrc
+fi
+
+# Vim
+if [[ ! -L "$HOME/.vim" ]]
+then
+	ln -s $DOTFILES/vim/vim/ $HOME/.vim
+fi
+
+####################
+# Export Variables #
+####################
+
+# LS Colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# GOPATH
+export GOPATH=$HOME/dev/go/
 
