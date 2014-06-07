@@ -53,7 +53,7 @@ fi
 # Load Terminal Themes #
 ########################
 
-
+open $DOTFILES/terminal/*.terminal
 
 ####################
 # Export Variables #
