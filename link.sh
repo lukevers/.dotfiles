@@ -55,6 +55,12 @@ fi
 
 open $DOTFILES/terminal/*.terminal
 
+################
+# Import Fonts #
+################
+
+cp $DOTFILES/fonts/* $HOME/Library/Fonts/
+
 ####################
 # Export Variables #
 ####################
