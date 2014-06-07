@@ -49,9 +49,17 @@ then
 	ln -s $DOTFILES/mutt/mutt/ $HOME/.mutt
 fi
 
+########################
+# Load Terminal Themes #
+########################
+
+
+
 ####################
 # Export Variables #
 ####################
+
+echo "
 
 # LS Colors
 export CLICOLOR=1
@@ -60,3 +68,4 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # GOPATH
 export GOPATH=$HOME/dev/go/
 
+" > $HOME/.sources;
