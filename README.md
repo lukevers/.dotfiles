@@ -9,7 +9,7 @@ This repository is filled with my own personal dotfiles. There probably isn't mu
 ./link.sh
 
 # What needs to be sourced on start
-echo "source ~/.sources" >> ~./bash_profile
+echo "source ~/.sources" >> ~/.bash_profile
 ```
 
 After running that just open a new terminal and it should be good.
