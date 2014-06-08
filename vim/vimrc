@@ -1,6 +1,6 @@
 set nocompatible " Disable vi-compatibility
 set t_Co=256
-
+ 
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -18,8 +18,9 @@ set smartcase			" ignore case if search pattern is all lowercase
 set mouse=a				" scroll with trackpad
 set nowrap				" don't wrap lines
 
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
+set backup
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swap/
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
