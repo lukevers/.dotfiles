@@ -73,17 +73,3 @@ open $DOTFILES/terminal/*.terminal
 
 cp $DOTFILES/fonts/* $HOME/Library/Fonts/
 
-####################
-# Export Variables #
-####################
-
-echo "
-
-# LS Colors
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# GOPATH
-export GOPATH=$HOME/dev/go/
-
-" > $HOME/.sources;
