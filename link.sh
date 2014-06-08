@@ -7,6 +7,12 @@ DOTFILES=$HOME/.dotfiles
 # Link Files #
 ##############
 
+# Bash Profile
+if [[ ! -L "$HOME/.bash_profile" ]]
+then
+	ln -s $DOTFILES/bash_profile $HOME/.bash_profile
+fi
+
 # Git
 if [[ ! -L "$HOME/.gitconfig" ]] 
 then
