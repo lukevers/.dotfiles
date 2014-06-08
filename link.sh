@@ -34,7 +34,7 @@ fi
 # Tmux Config
 if [[ ! -L "$HOME/.tmux.conf" ]]
 then
-	ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+	ln -s $DOTFILES/tmux/tmux.config $HOME/.tmux.conf
 fi
 
 # Mutt
@@ -48,6 +48,12 @@ if [[ ! -L "$HOME/.mutt" ]]
 then
 	ln -s $DOTFILES/mutt/mutt/ $HOME/.mutt
 fi
+
+###############
+# Update TMUX #
+###############
+
+tmux source-file $HOME/.tmux.conf
 
 ########################
 # Load Terminal Themes #
