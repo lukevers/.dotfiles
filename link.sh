@@ -55,6 +55,12 @@ then
 	ln -s $DOTFILES/mutt/mutt/ $HOME/.mutt
 fi
 
+# Alfred Preferences
+if [[ ! -L "$HOME/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences" ]]
+then
+	ln -s $DOTFILES/alfred/Alfred.alfredpreferences $HOME/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences
+fi
+
 ###############
 # Update TMUX #
 ###############
