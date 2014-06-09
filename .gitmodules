@@ -13,3 +13,6 @@
 [submodule "vim/vim/bundle/dash.vim"]
 	path = vim/vim/bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim
+[submodule "vim/vim/bundle/vim-yaml"]
+	path = vim/vim/bundle/vim-yaml
+	url = https://github.com/avakhov/vim-yaml
