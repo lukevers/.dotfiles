@@ -5,11 +5,14 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # GOPATH
 export GOPATH=$HOME/dev/go/
 
-# Homestead Vagrant VM
+# Homestead Vagrant SSH
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 
-# Vagrant Start
+# Homestead Vagrant Start
 alias vs='cd ~/Homestead && vagrant up'
 
-# Vagrant Reload
+# Homestead Vagrant Reload
 alias vr='cd ~/Homestead && vagrant reload --provision'
+
+# MacVim Terminal Alias
+alias vim='mvim'
