@@ -9,10 +9,13 @@ syntax on 				" syntax
 syntax enable
 colorscheme xoria256
 
+set conceallevel=2
+
 set number				" always show line numbers
 set tabstop=4		 	" a tab is 4 spaces
 set showmode			" always show what mode we're currently editing in
 set autoindent			" always set autoindenting on
+set smartindent
 set ignorecase			" ignore case when searching
 set smartcase			" ignore case if search pattern is all lowercase
 set mouse=a				" scroll with trackpad
@@ -26,6 +29,10 @@ set directory=~/.vim/swap/
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+
+" tabs
+set list lcs=tab:\┆·
+highlight SpecialKey ctermfg=59 guifg=#3C3C3C
 
 "easier window navigation 
 nmap <C-h> <C-w>h
