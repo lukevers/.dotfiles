@@ -22,3 +22,12 @@
 [submodule "vim/vim/bundle/rust.vim"]
 	path = vim/vim/bundle/rust.vim
 	url = https://github.com/wting/rust.vim
+[submodule "vim/vim/bundle/vim-go"]
+	path = vim/vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/vim/bundle/MatchTagAlways"]
+	path = vim/vim/bundle/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "vim/vim/bundle/autoswap.vim"]
+	path = vim/vim/bundle/autoswap.vim
+	url = https://github.com/vim-scripts/autoswap.vim.git
