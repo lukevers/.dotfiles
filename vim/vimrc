@@ -5,21 +5,24 @@ set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 
-syntax on 				" syntax 
+syntax on " syntax 
 syntax enable
 colorscheme xoria256
 
 set conceallevel=2
 
-set number				" always show line numbers
-set tabstop=4		 	" a tab is 4 spaces
-set showmode			" always show what mode we're currently editing in
-set autoindent			" always set autoindenting on
+set number " always show line numbers
+set tabstop=4 " a tab is 4 spaces
+set showmode " always show what mode we're currently editing in
+set autoindent " always set autoindenting on
 set smartindent
-set ignorecase			" ignore case when searching
-set smartcase			" ignore case if search pattern is all lowercase
-set mouse=a				" scroll with trackpad
-set nowrap				" don't wrap lines
+set ignorecase " ignore case when searching
+set smartcase " ignore case if search pattern is all lowercase
+set mouse=a " scroll with trackpad
+set nowrap " don't wrap lines by defaul
+set ttyfast "assume a fast connection to the terminal for better rendering
+set history=250 "undo history
+set fileformats=mac,unix,dos "set compatible line endings in order of preference
 
 set backup
 set backupdir=~/.vim/backup/
@@ -54,4 +57,3 @@ nmap <C-b> :NERDTreeToggle<cr>
 
 " Running vim-pathogen to load ~/.vim/bundle
 execute pathogen#infect()
-
