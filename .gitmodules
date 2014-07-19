@@ -37,3 +37,6 @@
 [submodule "vim/vim/bundle/vim-fugitive"]
 	path = vim/vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/vim/bundle/MatchTagAlways"]
+	path = vim/vim/bundle/MatchTagAlways
+	url = https://github.com/prurigro/MatchTagAlways
