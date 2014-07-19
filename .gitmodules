@@ -31,3 +31,6 @@
 [submodule "vim/vim/bundle/vim-polyglot-darkcloud"]
 	path = vim/vim/bundle/vim-polyglot-darkcloud
 	url = https://github.com/prurigro/vim-polyglot-darkcloud
+[submodule "vim/vim/bundle/vim-fixkey"]
+	path = vim/vim/bundle/vim-fixkey
+	url = https://github.com/drmikehenry/vim-fixkey
