@@ -34,3 +34,6 @@
 [submodule "vim/vim/bundle/vim-fixkey"]
 	path = vim/vim/bundle/vim-fixkey
 	url = https://github.com/drmikehenry/vim-fixkey
+[submodule "vim/vim/bundle/vim-fugitive"]
+	path = vim/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
