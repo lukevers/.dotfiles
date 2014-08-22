@@ -22,7 +22,7 @@ set mouse=a " scroll with trackpad
 set nowrap " don't wrap lines by defaul
 set ttyfast "assume a fast connection to the terminal for better rendering
 set history=250 "undo history
-set fileformats=mac,unix,dos "set compatible line endings in order of preference
+set fileformats=unix "set compatible line endings in order of preference
 
 set backup
 set backupdir=~/.vim/backup/
