@@ -54,6 +54,13 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 " NERD Tree
 nmap <C-b> :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
+let NERDTreeMouseMode=2
+let NERDTreeKeepTreenInNewTab=1
+let NERDTreeIgnore=['.DS_Store', '.git/*']
+
+" Set Font
+set guifont=Source\ Code\ Pro\ Light:h12
 
 " Running vim-pathogen to load ~/.vim/bundle
 execute pathogen#infect()
