@@ -16,6 +16,7 @@ set tabstop=4 " a tab is 4 spaces
 set showmode " always show what mode we're currently editing in
 set autoindent " always set autoindenting on
 set smartindent
+set shiftwidth=4 " indent by 4 spaces when using >>, <<, ==
 set ignorecase " ignore case when searching
 set smartcase " ignore case if search pattern is all lowercase
 set mouse=a " scroll with trackpad
