@@ -60,7 +60,7 @@ let NERDTreeKeepTreenInNewTab=1
 let NERDTreeIgnore=['.DS_Store', '.git/*']
 
 " Set Font
-set guifont=Source\ Code\ Pro\ Light:h12
+set guifont=Source\ Code\ Pro\ Light:h11
 
 " Running vim-pathogen to load ~/.vim/bundle
 execute pathogen#infect()
