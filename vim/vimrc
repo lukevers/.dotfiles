@@ -20,7 +20,7 @@ set shiftwidth=4 " indent by 4 spaces when using >>, <<, ==
 set ignorecase " ignore case when searching
 set smartcase " ignore case if search pattern is all lowercase
 set mouse=a " scroll with trackpad
-set nowrap " don't wrap lines by defaul
+set nowrap " don't wrap lines by default
 set ttyfast "assume a fast connection to the terminal for better rendering
 set history=250 "undo history
 set fileformats=unix "set compatible line endings in order of preference
@@ -37,21 +37,6 @@ let g:mapleader = ","
 " tabs
 set list lcs=tab:\┆·
 highlight SpecialKey ctermfg=59 guifg=#3C3C3C
-
-"easier window navigation 
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-  
-"Resize vsplit
-nmap <C-v> :vertical resize +5<cr>
-nmap 25 :vertical resize 40<cr>
-nmap 50 <c-w>=
-map 75 :vertical resize 120<cr>
-
-"Auto change directory to match current file ,cd
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 " NERD Tree
 nmap <C-b> :NERDTreeToggle<cr>
