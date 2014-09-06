@@ -7,9 +7,6 @@
 [submodule "vim/vim/bundle/vim-less"]
 	path = vim/vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
-[submodule "vim/vim/bundle/vim-yaml"]
-	path = vim/vim/bundle/vim-yaml
-	url = https://github.com/avakhov/vim-yaml
 [submodule "vim/vim/bundle/indentLine"]
 	path = vim/vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
