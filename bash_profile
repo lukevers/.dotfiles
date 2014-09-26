@@ -9,13 +9,13 @@ export GOPATH=$HOME/Code/go/
 alias vs='ssh vagrant@127.0.0.1 -p 2222'
 
 # Homestead Vagrant Start
-alias vup='cd ~/Homestead && vagrant up'
+alias vup='pushd ~/Homestead && vagrant up && popd'
 
 # Homestead Vagrant Reload
-alias vpro='cd ~/Homestead && vagrant reload --provision'
+alias vpro='pushd ~/Homestead && vagrant reload --provision && popd'
 
 # Homestead Vagrant Halt
-alias vhalt='cd ~/Homestead && vagrant halt'
+alias vhalt='pushd ~/Homestead && vagrant halt && popd'
 
 # MacVim Terminal Alias
 alias vim='mvim'

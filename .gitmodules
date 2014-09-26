@@ -31,3 +31,6 @@
 [submodule "vim/vim/bundle/loremipsum"]
 	path = vim/vim/bundle/loremipsum
 	url = https://github.com/vim-scripts/loremipsum.git
+[submodule "scripts/mp4towebm"]
+	path = scripts/mp4towebm
+	url = https://github.com/lukevers/mp4towebm
