@@ -4,9 +4,7 @@
 
 # Change the following six lines to match your Gmail account details
 set imap_user = "luke@lukevers.com"
-set imap_pass = ""
 set smtp_url = smtp://luke@lukevers.com@smtp.gmail.com:587
-set smtp_pass = ""
 set from = "luke@lukevers.com"
 set realname = "Luke Evers"
 
@@ -46,8 +44,8 @@ unset use_ipv6
 
 # source shit
 source ~/.mutt/crypto
+source ~/.mutt_pass
 
 # decrypt
 bind pager "'" decrypt-copy
 bind pager "\"" decrypt-save
-
