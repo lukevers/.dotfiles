@@ -34,6 +34,11 @@ set directory=~/.vim/swap/
 let mapleader = ","
 let g:mapleader = ","
 
+" search
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
 " tabs
 set list lcs=tab:\┆·
 highlight SpecialKey ctermfg=59 guifg=#3C3C3C
