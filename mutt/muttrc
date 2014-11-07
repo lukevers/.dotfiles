@@ -42,6 +42,8 @@ bind index "^" imap-fetch-mail
 
 unset use_ipv6
 
+set smtp_authenticators = 'gssapi:login'
+
 # source shit
 source ~/.mutt/crypto
 source ~/.mutt_pass
