@@ -1,22 +1,40 @@
 set nocompatible " Disable vi-compatibility
 set t_Co=256
- 
+
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
 
 syntax on " syntax 
 syntax enable
-colorscheme xoria256
+
+colorscheme base16-ocean
+set background=dark
 
 set conceallevel=2
 
 set number " always show line numbers
-set tabstop=4 " a tab is 4 spaces
 set showmode " always show what mode we're currently editing in
-set autoindent " always set autoindenting on
+
+set autoindent
 set smartindent
-set shiftwidth=4 " indent by 4 spaces when using >>, <<, ==
+
+" size of a hard tabstop
+set tabstop=4
+
+" size of an "indent"
+set shiftwidth=4
+
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+
+" make "tab" insert indents instead of tabs at the beginning of a line
+set smarttab
+
+" always uses spaces instead of tab characters
+set expandtab
+
 set ignorecase " ignore case when searching
 set smartcase " ignore case if search pattern is all lowercase
 set mouse=a " scroll with trackpad
@@ -41,14 +59,14 @@ map g/ <Plug>(incsearch-stay)
 
 " tabs
 set list lcs=tab:\┆·
-highlight SpecialKey ctermfg=59 guifg=#3C3C3C
+highlight SpecialKey ctermfg=59 guifg=#65737e
 
 " NERD Tree
 nmap <C-b> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
 let NERDTreeKeepTreenInNewTab=1
-let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_components']
+let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_components', 'vendor']
 
 " Set Font
 set guifont=Source\ Code\ Pro\ Light:h11
