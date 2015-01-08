@@ -19,3 +19,9 @@ alias vhalt='pushd ~/Homestead && vagrant halt && popd'
 
 # MacVim Terminal Alias
 alias vim='mvim'
+
+# Add Nim to PATH
+PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
+
+# Add Nimble to PATH
+PATH=$PATH:~/.nimble/bin
