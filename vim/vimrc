@@ -8,8 +8,15 @@ set go-=L " Removes left hand scroll bar
 syntax on " syntax 
 syntax enable
 
-colorscheme base16-ocean
+" always set background to dark
 set background=dark
+
+" if we're on gui, use base16-ocean
+if has('gui_running')
+    colorscheme base16-ocean
+else
+    colorscheme xoria256
+endif
 
 set conceallevel=2
 
