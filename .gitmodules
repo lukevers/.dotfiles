@@ -37,3 +37,6 @@
 [submodule "vim/vim/bundle/incsearch.vim"]
 	path = vim/vim/bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
+[submodule "vim/vim/bundle/vim-osx-colorpicker"]
+	path = vim/vim/bundle/vim-osx-colorpicker
+	url = https://github.com/iandoe/vim-osx-colorpicker
