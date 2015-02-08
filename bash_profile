@@ -25,3 +25,4 @@ PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
 
 # Add Nimble to PATH
 PATH=$PATH:~/.nimble/bin
+export PATH=/usr/local/sbin:$PATH
