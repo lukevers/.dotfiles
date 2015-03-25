@@ -26,3 +26,6 @@ PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
 # Add Nimble to PATH
 PATH=$PATH:~/.nimble/bin
 export PATH=/usr/local/sbin:$PATH
+
+# Add Racket to PATH
+PATH=$PATH:"/Applications/Racket\ v6.1.1/bin/"
