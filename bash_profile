@@ -4,6 +4,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # GOPATH
 export GOPATH=$HOME/Code/go/
+export PATH=$PATH:$GOPATH/bin
 
 # Homestead Vagrant SSH
 alias vs='ssh vagrant@127.0.0.1 -p 2222'
@@ -21,11 +22,11 @@ alias vhalt='pushd ~/Homestead && vagrant halt && popd'
 alias vim='mvim'
 
 # Add Nim to PATH
-PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
+export PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
 
 # Add Nimble to PATH
-PATH=$PATH:~/.nimble/bin
+export PATH=$PATH:~/.nimble/bin
 export PATH=/usr/local/sbin:$PATH
 
 # Add Racket to PATH
-PATH=$PATH:"/Applications/Racket\ v6.1.1/bin/"
+export PATH=$PATH:"/Applications/Racket\ v6.1.1/bin/"
