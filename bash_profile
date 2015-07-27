@@ -3,7 +3,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # GOPATH
-export GOPATH=$HOME/Code/go/
+export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 
 # Homestead Vagrant SSH
@@ -28,5 +28,5 @@ export PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
 export PATH=$PATH:~/.nimble/bin
 export PATH=/usr/local/sbin:$PATH
 
-# Add Racket to PATH
-export PATH=$PATH:"/Applications/Racket\ v6.1.1/bin/"
+# Upload
+export PATH=$PATH:/Users/lukevers/Code/javascript/github.com/lukevers/upload
