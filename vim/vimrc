@@ -54,10 +54,6 @@ set backup
 set backupdir=~/.vim/backup/
 set directory=~/.vim/swap/
 
-" 80 character line wrap without broken words
-set formatoptions+=w
-set tw=80
-
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
