@@ -46,3 +46,6 @@
 [submodule "vim/vim/bundle/syntastic"]
 	path = vim/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+[submodule "vim/vim/bundle/vim-multiple-cursors"]
+	path = vim/vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
