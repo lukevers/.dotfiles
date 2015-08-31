@@ -78,5 +78,8 @@ let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_compone
 " Set Font
 set guifont=Source\ Code\ Pro\ Light:h11
 
+" Set lightline colors
+let g:lightline = {'colorscheme': 'wombat'}
+
 " Running vim-pathogen to load ~/.vim/bundle
 execute pathogen#infect()
