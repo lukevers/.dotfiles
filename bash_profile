@@ -30,3 +30,6 @@ export PATH=/usr/local/sbin:$PATH
 
 # Upload
 export PATH=$PATH:/Users/lukevers/Code/javascript/github.com/lukevers/upload
+
+# Share cjdns homestead
+alias cjdnshomestead='socat TCP6-LISTEN:9000,fork TCP4:127.0.0.1:8000'
