@@ -76,10 +76,17 @@ let NERDTreeKeepTreenInNewTab=1
 let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_components', 'vendor']
 
 " Set Font
-set guifont=Source\ Code\ Pro\ Light:h11
+set guifont=Sauce\ Code\ Powerline\ Light:h11
 
 " Set lightline colors
-let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
 
 " Running vim-pathogen to load ~/.vim/bundle
 execute pathogen#infect()
