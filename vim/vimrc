@@ -13,15 +13,18 @@ set background=dark
 
 " if we're on gui, use base16-ocean
 if has('gui_running')
-    colorscheme base16-ocean
+    colorscheme hybrid_material
 else
-    colorscheme xoria256
+    colorscheme hybrid_material
 endif
 
 set conceallevel=2
 
 set number " always show line numbers
 set showmode " always show what mode we're currently editing in
+
+set modeline
+set modelines=5
 
 set autoindent
 set smartindent

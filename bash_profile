@@ -33,3 +33,12 @@ export PATH=$PATH:/Users/lukevers/Code/javascript/github.com/lukevers/upload
 
 # Share cjdns homestead
 alias cjdnshomestead='socat TCP6-LISTEN:9000,fork TCP4:127.0.0.1:8000'
+
+# PHP Restart
+alias restart-php='launchctl unload /Users/lukevers/Library/LaunchAgents/homebrew.mxcl.php55.plist && launchctl load /Users/lukevers/Library/LaunchAgents/homebrew.mxcl.php55.plist'
+
+# Search for string recursively in current directory
+function search {
+    echo "Searching for $1:";
+    grep -rl "$1" .
+}
