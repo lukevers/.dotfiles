@@ -40,9 +40,6 @@
 [submodule "vim/vim/bundle/vim-osx-colorpicker"]
 	path = vim/vim/bundle/vim-osx-colorpicker
 	url = https://github.com/iandoe/vim-osx-colorpicker
-[submodule "vim/vim/bundle/vim-preview"]
-	path = vim/vim/bundle/vim-preview
-	url = git@github.com:greyblake/vim-preview.git
 [submodule "vim/vim/bundle/syntastic"]
 	path = vim/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
