@@ -48,4 +48,7 @@
 	url = https://github.com/terryma/vim-multiple-cursors
 [submodule "vim/vim/bundle/lightline.vim"]
 	path = vim/vim/bundle/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim/vim/bundle/vim-livedown"]
+	path = vim/vim/bundle/vim-livedown
+	url = https://github.com/shime/vim-livedown

@@ -57,6 +57,9 @@ set backup
 set backupdir=~/.vim/backup/
 set directory=~/.vim/swap/
 
+" Set all md files to be read as markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
