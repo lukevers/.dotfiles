@@ -21,6 +21,9 @@ alias vhalt='pushd ~/Homestead && vagrant halt && popd'
 # MacVim Terminal Alias
 alias vim='mvim'
 
+# Dir changs
+alias mm='cd /Users/lukevers/Code/php/github.com/mmlafleur/mmlafleur'
+
 # Add Nim to PATH
 export PATH=$PATH:~/Code/nim/github.com/Araq/Nim/bin
 
