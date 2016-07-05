@@ -8,7 +8,7 @@
 	path = vim/vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 [submodule "vim/vim/bundle/neocomplete/vim"]
-	path = vim/vim/bundle/neocomplete/vim
+	path = vim/vim/bundle/neocomplete.vim
 	url = https://github.com/Shougo/neocomplete.vim
 [submodule "vim/vim/bundle/neosnippet.vim"]
 	path = vim/vim/bundle/neosnippet.vim
@@ -61,3 +61,6 @@
 [submodule "vim/vim/bundle/neosnippet-snippets"]
 	path = vim/vim/bundle/neosnippet-snippets
 	url = https://github.com/Shougo/neosnippet-snippets
+[submodule "vim/vim/bundle/neocomplete.vim"]
+	path = vim/vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim
