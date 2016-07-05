@@ -1,8 +1,9 @@
 [user]
 	name = Luke Evers
-	email = me@lukevers.com
+	email = luke@lukevers.com
+	signingkey = 9399DB24
 [core]
-	editor = vi
+	editor = /usr/local/bin/vim
 [color]
 	ui = auto
 [log]
@@ -11,3 +12,5 @@
 	whitespace = strip
 [push]
 	default = matching
+[commit]
+	gpgsign = true

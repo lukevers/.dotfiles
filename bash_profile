@@ -6,17 +6,11 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 
-# Homestead Vagrant SSH
-alias vs='ssh vagrant@127.0.0.1 -p 2222'
+# Pebble
+export PATH=$PATH:/Users/lukevers/Code/pebble/PebbleSDK-3.7/bin
 
-# Homestead Vagrant Start
-alias vup='pushd ~/Homestead && vagrant up && popd'
-
-# Homestead Vagrant Reload
-alias vpro='pushd ~/Homestead && vagrant reload --provision && popd'
-
-# Homestead Vagrant Halt
-alias vhalt='pushd ~/Homestead && vagrant halt && popd'
+# Bin
+export PATH=$PATH:/Users/lukevers/bin
 
 # MacVim Terminal Alias
 alias vim='mvim'
@@ -45,3 +39,9 @@ function search {
     echo "Searching for $1:";
     grep -rl "$1" .
 }
+
+[[ -s "/Users/lukevers/.gvm/scripts/gvm" ]] && source "/Users/lukevers/.gvm/scripts/gvm"
+gvm use go1.6 > /dev/null
+
+# Delete merged branches
+alias repocleanup='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'

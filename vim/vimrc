@@ -1,98 +1,196 @@
-set nocompatible " Disable vi-compatibility
-set t_Co=256
+"------------------------------------------------------------------------------
+" Pathogen
+"------------------------------------------------------------------------------
 
-set guioptions-=T " Removes top toolbar
-set guioptions-=r " Removes right hand scroll bar
-set go-=L " Removes left hand scroll bar
+execute pathogen#infect()
+call pathogen#helptags()
 
-syntax on " syntax 
-syntax enable
+"------------------------------------------------------------------------------
+" General
+"------------------------------------------------------------------------------
 
-" always set background to dark
-set background=dark
+syntax on
 
-" if we're on gui, use base16-ocean
-if has('gui_running')
-    colorscheme hybrid_material
-else
-    colorscheme hybrid_material
-endif
+set mouse=a
+set nocompatible
 
-set conceallevel=2
+set backspace=indent,eol,start
 
-set number " always show line numbers
-set showmode " always show what mode we're currently editing in
+filetype on
+filetype plugin on
+filetype plugin indent on
 
-set modeline
-set modelines=5
-
-set autoindent
-set smartindent
-
-" size of a hard tabstop
 set tabstop=4
-
-" size of an "indent"
 set shiftwidth=4
-
-" a combination of spaces and tabs are used to simulate tab stops at a width
-" other than the (hard)tabstop
-set softtabstop=4
-
-" make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
-
-" always uses spaces instead of tab characters
 set expandtab
 
-set ignorecase " ignore case when searching
-set smartcase " ignore case if search pattern is all lowercase
-set mouse=a " scroll with trackpad
-set nowrap " don't wrap lines by default
-set ttyfast "assume a fast connection to the terminal for better rendering
-set history=250 "undo history
-set fileformats=unix "set compatible line endings in order of preference
+"------------------------------------------------------------------------------
+" Wrap settings
+"------------------------------------------------------------------------------
+
+set nowrap
+
+"------------------------------------------------------------------------------
+" Look and Feel
+"------------------------------------------------------------------------------
+
+" Remove right hand and left hand scrollbars
+set guioptions-=r
+set go-=L
+
+set number
+
+set background=dark
+colorscheme hybrid_material
+
+set guifont=Sauce\ Code\ Powerline\ Light:h11
+let g:Powerline_symbols = 'fancy'
+
+set list lcs=tab:\┆·
+highlight SpecialKey ctermfg=59 guifg=#65737e
+
+"------------------------------------------------------------------------------
+" Lightline
+"------------------------------------------------------------------------------
+
+" Hide default vim "-- INSERT --" and other modes
+set noshowmode
+
+" Preferences
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'filename' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightLineFugitive',
+      \   'readonly': 'LightLineReadonly',
+      \   'modified': 'LightLineModified',
+      \   'filename': 'LightLineFilename'
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
+function! LightLineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightLineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightLineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightLineFilename()
+  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+endfunction
+
+"------------------------------------------------------------------------------
+" Swap/Backup Files
+"------------------------------------------------------------------------------
 
 set backup
 set backupdir=~/.vim/backup/
 set directory=~/.vim/swap/
 
-" Set all md files to be read as markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+"------------------------------------------------------------------------------
+" Nerdtree
+"------------------------------------------------------------------------------
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-
-" search
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-" tabs
-set list lcs=tab:\┆·
-highlight SpecialKey ctermfg=59 guifg=#65737e
-
-" NERD Tree
 nmap <C-b> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
 let NERDTreeKeepTreenInNewTab=1
 let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_components', '.sass-cache', '.vagrant']
 
-" Set Font
-set guifont=Sauce\ Code\ Powerline\ Light:h11
+" Open Nerdtree on startup when no file has been specified
+autocmd VimEnter * if !argc() | NERDTree | endif
 
-" Set lightline colors
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
+" Locate file in Nerdtree hierarchy
+map <leader>T :NERDTreeFind<cr>
 
-" Running vim-pathogen to load ~/.vim/bundle
-execute pathogen#infect()
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+"------------------------------------------------------------------------------
+" NeoComplete
+"------------------------------------------------------------------------------
+
+let g:acp_enableAtStartup = 0
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_auto_select = 1
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"------------------------------------------------------------------------------
+" Neosnippet
+"------------------------------------------------------------------------------
+
+" Don't show preview at the top of the window
+set completeopt-=preview
+
+"------------------------------------------------------------------------------
+" Tagbar
+"------------------------------------------------------------------------------
+
+nmap <F6> :TagbarToggle<CR>
+
+"------------------------------------------------------------------------------
+" Vim-go
+"------------------------------------------------------------------------------
+
+let g:go_fmt_fail_silently = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+"------------------------------------------------------------------------------
+" PHP
+"------------------------------------------------------------------------------
+
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
+let g:phpcomplete_index_composer_command = 'composer'
+let g:tagbar_phpctags_memory_limit = '512M'

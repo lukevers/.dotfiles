@@ -1,1 +1,5 @@
 .DS_Store
+
+# Folders
+/vim/vim/backup
+/vim/vim/swap
