@@ -190,7 +190,12 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 " PHP
 "------------------------------------------------------------------------------
 
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
-
 let g:phpcomplete_index_composer_command = 'composer'
 let g:tagbar_phpctags_memory_limit = '512M'
+
+let $PATH=$PATH . ':' . expand('~/.composer/vendor/bin')
+
+let g:padawan#composer_command = "php /usr/local/bin/composer"
+let g:neocomplete#force_omni_input_patterns = {}
+let g:neocomplete#force_omni_input_patterns.php =
+\ '\h\w*\|[^- \t]->\w*'

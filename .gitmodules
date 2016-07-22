@@ -67,3 +67,9 @@
 [submodule "scripts/mp4towebm"]
 	path = scripts/mp4towebm
 	url = https://github.com/lukevers/mp4towebm
+[submodule "vim/vim/bundle/phpcd.vim"]
+	path = vim/vim/bundle/phpcd.vim
+	url = https://github.com/phpvim/phpcd.vim
+[submodule "vim/vim/bundle/padawan.vim"]
+	path = vim/vim/bundle/padawan.vim
+	url = https://github.com/mkusher/padawan.vim
