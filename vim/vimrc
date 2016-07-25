@@ -126,7 +126,14 @@ nmap <C-b> :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
 let NERDTreeKeepTreenInNewTab=1
-let NERDTreeIgnore=['.DS_Store', '.git/*[[dir]]', 'node_modules', 'bower_components', '.sass-cache', '.vagrant']
+let NERDTreeIgnore=[
+    \ '.DS_Store',
+    \ '.git/*[[dir]]',
+    \ 'node_modules',
+    \ 'bower_components',
+    \ '.sass-cache',
+    \ '.vagrant'
+    \ ]
 
 " Open Nerdtree on startup when no file has been specified
 autocmd VimEnter * if !argc() | NERDTree | endif
