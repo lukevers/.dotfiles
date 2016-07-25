@@ -1,16 +1,19 @@
 [user]
-	name = Luke Evers
-	email = luke@lukevers.com
-	signingkey = 9399DB24
+    name = Luke Evers
+    email = luke@lukevers.com
+    signingkey = 9399DB24
 [core]
-	editor = /usr/local/bin/vim
+    editor = /usr/local/bin/vim
 [color]
-	ui = auto
+    ui = auto
 [log]
-	decorate = short
+    decorate = short
 [apply]
-	whitespace = strip
+    whitespace = strip
 [push]
-	default = matching
+    default = matching
 [commit]
-	gpgsign = true
+    gpgsign = true
+[alias]
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
