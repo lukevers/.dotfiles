@@ -132,7 +132,8 @@ let NERDTreeIgnore=[
     \ 'node_modules',
     \ 'bower_components',
     \ '.sass-cache',
-    \ '.vagrant'
+    \ '.vagrant',
+    \ '.padawan'
     \ ]
 
 " Open Nerdtree on startup when no file has been specified
