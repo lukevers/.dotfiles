@@ -73,3 +73,9 @@
 [submodule "vim/vim/bundle/padawan.vim"]
 	path = vim/vim/bundle/padawan.vim
 	url = https://github.com/mkusher/padawan.vim
+[submodule "vim/vim/bundle/vim-easytags"]
+	path = vim/vim/bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule "vim/vim/bundle/vim-misc"]
+	path = vim/vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
