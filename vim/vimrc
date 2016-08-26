@@ -56,6 +56,14 @@ highlight SpecialKey ctermfg=59 guifg=#65737e
 
 set tags=tags,./tags
 
+" Verical ctag split instead of horizontal
+function! VerticalCTagSplit()
+  vsplit
+  execute "tag " . expand("<cword>")
+endfunction
+
+nnoremap <c-]> :call VerticalCTagSplit()<CR>
+
 "------------------------------------------------------------------------------
 " Lightline
 "------------------------------------------------------------------------------
