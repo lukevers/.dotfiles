@@ -58,8 +58,12 @@ set tags=tags,./tags
 
 " Verical ctag split instead of horizontal
 function! VerticalCTagSplit()
-  vsplit
-  execute "tag " . expand("<cword>")
+  try
+    vsplit
+    execute "tag " . expand("<cword>")
+  catch
+      quit
+   endtry
 endfunction
 
 nnoremap <c-]> :call VerticalCTagSplit()<CR>
