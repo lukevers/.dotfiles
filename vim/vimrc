@@ -226,3 +226,12 @@ let g:padawan#composer_command = "php /usr/local/bin/composer"
 let g:neocomplete#force_omni_input_patterns = {}
 let g:neocomplete#force_omni_input_patterns.php =
 \ '\h\w*\|[^- \t]->\w*'
+
+"------------------------------------------------------------------------------
+" Vim Move
+"------------------------------------------------------------------------------
+" <C-k> - Move selected lines up
+" <C-j> - Move selected lines down
+"------------------------------------------------------------------------------
+
+let g:move_key_modifier = 'C'

@@ -73,3 +73,6 @@
 [submodule "vim/vim/bundle/padawan.vim"]
 	path = vim/vim/bundle/padawan.vim
 	url = https://github.com/mkusher/padawan.vim
+[submodule "vim/vim/bundle/vim-move"]
+	path = vim/vim/bundle/vim-move
+	url = https://github.com/matze/vim-move
