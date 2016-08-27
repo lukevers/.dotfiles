@@ -58,12 +58,17 @@ set tags=tags,./tags
 
 " Verical ctag split instead of horizontal
 function! VerticalCTagSplit()
+  let err=0
   try
     vsplit
     execute "tag " . expand("<cword>")
   catch
-      quit
-   endtry
+    let err=1
+    quit
+  endtry
+  if !err
+    :NERDTreeFind
+  endif
 endfunction
 
 nnoremap <c-]> :call VerticalCTagSplit()<CR>
