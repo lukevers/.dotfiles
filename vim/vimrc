@@ -72,7 +72,6 @@ function! VerticalCTagSplit()
 endfunction
 
 nnoremap <c-]> :call VerticalCTagSplit()<CR>
-map <RightMouse> :call VerticalCTagSplit()<CR>
 
 "------------------------------------------------------------------------------
 " Lightline
