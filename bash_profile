@@ -2,10 +2,6 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# GOPATH
-export GOPATH=$HOME/Code/go
-export PATH=$PATH:$GOPATH/bin
-
 # Pebble
 export PATH=$PATH:/Users/lukevers/Code/pebble/PebbleSDK-3.7/bin
 
@@ -40,8 +36,11 @@ function search {
     grep -rl "$1" .
 }
 
+# Golang
 [[ -s "/Users/lukevers/.gvm/scripts/gvm" ]] && source "/Users/lukevers/.gvm/scripts/gvm"
 gvm use go1.6 > /dev/null
+export GOPATH=$HOME/Code/go
+export PATH=$PATH:$GOPATH/bin
 
 # Delete merged branches
 alias repocleanup='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
