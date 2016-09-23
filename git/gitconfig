@@ -17,3 +17,7 @@
 [alias]
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
