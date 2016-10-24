@@ -76,3 +76,6 @@
 [submodule "vim/vim/bundle/vim-move"]
 	path = vim/vim/bundle/vim-move
 	url = https://github.com/matze/vim-move
+[submodule "vim/vim/bundle/rename.vim"]
+	path = vim/vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim
