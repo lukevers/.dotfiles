@@ -6,7 +6,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export PATH=$PATH:/Users/lukevers/Code/pebble/PebbleSDK-3.7/bin
 
 # Bin
-export PATH=$PATH:/Users/lukevers/bin
+export PATH=$PATH:$HOME/bin:$HOME/.composer/vendor/bin
 
 # MacVim Terminal Alias
 alias vim='mvim'
