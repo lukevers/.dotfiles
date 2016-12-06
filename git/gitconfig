@@ -1,7 +1,7 @@
 [user]
     name = Luke Evers
     email = luke@lukevers.com
-    signingkey = 9399DB24
+    signingkey = 3405BD68
 [core]
     editor = /usr/local/bin/vim
 [color]

@@ -1,9 +1,42 @@
 "------------------------------------------------------------------------------
-" Pathogen
+" Vundle
 "------------------------------------------------------------------------------
 
-execute pathogen#infect()
-call pathogen#helptags()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'danro/rename.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'evidens/vim-twig'
+Plugin 'fatih/vim-go'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'gioele/vim-autoswap'
+Plugin 'itchyny/lightline.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'matze/vim-move'
+Plugin 'mkusher/padawan.vim'
+Plugin 'phpvim/phpcd.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'shime/vim-livedown'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
 
 "------------------------------------------------------------------------------
 " General
