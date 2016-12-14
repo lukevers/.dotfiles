@@ -29,7 +29,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matze/vim-move'
 Plugin 'mkusher/padawan.vim'
-Plugin 'phpvim/phpcd.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shime/vim-livedown'
 Plugin 'terryma/vim-multiple-cursors'
@@ -254,7 +253,6 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 " PHP
 "------------------------------------------------------------------------------
 
-let g:phpcomplete_index_composer_command = 'composer'
 let g:tagbar_phpctags_memory_limit = '512M'
 
 let $PATH=$PATH . ':' . expand('~/.composer/vendor/bin')
