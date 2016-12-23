@@ -26,6 +26,7 @@ Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gioele/vim-autoswap'
 Plugin 'itchyny/lightline.vim'
+Plugin 'lukevers/php-foldexpr.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matze/vim-move'
 Plugin 'mkusher/padawan.vim'
@@ -262,6 +263,40 @@ let g:padawan#composer_command = "php /usr/local/bin/composer"
 let g:neocomplete#force_omni_input_patterns = {}
 let g:neocomplete#force_omni_input_patterns.php =
 \ '\h\w*\|[^- \t]->\w*'
+
+"------------------------------------------------------------------------------
+" PHP Folding
+"------------------------------------------------------------------------------
+
+" Fold groups of use statements in the global scope
+let g:phpfold_use = 0
+
+" Fold if/elseif/else and try/catch/finally blocks as a group, rather than each part separate.
+let g:phpfold_group_iftry = 0
+
+" Group function arguments split across multiple lines into their own fold.
+let g:phpfold_group_args = 0
+
+" Fold case and default blocks inside switches.
+let g:phpfold_group_case = 0
+
+" Fold HEREDOCs and NOWDOCs
+let g:phpfold_heredocs = 0
+
+" Fold DocBlocks
+let g:phpfold_docblocks = 0
+
+" Fold DocBlocks. Overrides g:phpfold_docblocks.
+let g:phpfold_doc_with_funcs = 0
+
+" Enable the custom foldtext option.
+let g:phpfold_text = 1
+
+" Display the line count on the right instead of the left.
+let g:phpfold_text_right_lines = 1
+
+" Display the percentage of lines the fold represents.
+let g:phpfold_text_percent = 1
 
 "------------------------------------------------------------------------------
 " Vim Move
