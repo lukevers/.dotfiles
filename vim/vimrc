@@ -282,7 +282,7 @@ let g:neocomplete#force_omni_input_patterns.php =
 let g:phpfold_use = 0
 
 " Fold if/elseif/else and try/catch/finally blocks as a group, rather than each part separate.
-let g:phpfold_group_iftry = 0
+let g:phpfold_group_iftry = 1
 
 " Group function arguments split across multiple lines into their own fold.
 let g:phpfold_group_args = 0
@@ -307,6 +307,9 @@ let g:phpfold_text_right_lines = 1
 
 " Display the percentage of lines the fold represents.
 let g:phpfold_text_percent = 1
+
+" Set the default fold level
+set foldlevel=1
 
 "------------------------------------------------------------------------------
 " Vim Move
