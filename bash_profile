@@ -31,6 +31,7 @@ function search {
 # Golang
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
+export GOROOT=`go env GOROOT`
 
 # Github rate limiting
 source $HOME/.gh
