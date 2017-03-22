@@ -1,3 +1,13 @@
 .ghx-column-headers .ghx-column, .ghx-columns .ghx-column {
     background: #FFFFFF;
 }
+
+.aui-header {
+    background: #333333;
+}
+
+.aui-header .aui-dropdown2-trigger:hover,
+.aui-header .aui-dropdown2-trigger:focus,
+.aui-header .aui-dropdown2-trigger.active {
+    background: #111111;
+}
