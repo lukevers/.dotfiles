@@ -4,6 +4,7 @@
     signingkey = 3405BD68
 [core]
     editor = /usr/local/bin/vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
     ui = auto
 [log]
@@ -17,6 +18,7 @@
 [alias]
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
+  patch = !git --no-pager diff --no-color
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

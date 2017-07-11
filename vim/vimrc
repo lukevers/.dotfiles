@@ -36,6 +36,9 @@ Plugin 'shime/vim-livedown'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'daveyarwood/vim-alda'
+Plugin 'smerrill/vcl-vim-plugin'
 
 call vundle#end()
 
@@ -274,6 +277,13 @@ let g:neocomplete#force_omni_input_patterns = {}
 let g:neocomplete#force_omni_input_patterns.php =
 \ '\h\w*\|[^- \t]->\w*'
 
+" Install the following Padawan packages:
+" https://github.com/padawan-php/php-di-plugin
+" https://github.com/pbogut/padawan.php-magento
+
+" Automate a re-index of Magento XML
+autocmd BufWritePre *.xml :silent! !touch .padawan/magento_reload_xml
+
 "------------------------------------------------------------------------------
 " PHP Folding
 "------------------------------------------------------------------------------
@@ -319,3 +329,10 @@ set foldlevel=1
 "------------------------------------------------------------------------------
 
 let g:move_key_modifier = 'C'
+
+"------------------------------------------------------------------------------
+" Syntastic
+"------------------------------------------------------------------------------
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'

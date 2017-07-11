@@ -8,6 +8,9 @@ export PATH=$PATH:/Users/lukevers/Code/pebble/PebbleSDK-3.7/bin
 # Bin
 export PATH=$PATH:$HOME/bin:$HOME/.composer/vendor/bin
 
+# The FUCK?
+eval $(thefuck --alias)
+
 # Setup Virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code/python
